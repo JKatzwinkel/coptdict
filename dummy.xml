@@ -1,0 +1,59 @@
+<text>
+	<body>
+		<entry>
+			<form type="lemma">amk</form>
+			<form type="non_lemma">amk0</form>
+			<gramGrp>
+				<pos>noun</pos>
+			</gramGrp>
+			<usg type="geo">A</usg>
+		</entry>
+
+		<entry>
+			<form type="lemma">amk</form>
+			<form type="non_lemma">amk1</form>
+			<gramGrp>
+				<pos>verb</pos>
+			</gramGrp>
+			<usg type="geo">A</usg>
+		</entry>
+
+		<entry>
+			<form type="lemma">amk</form>
+			<form type="non_lemma">amk2</form>
+			<gramGrp>
+				<pos>noun</pos>
+			</gramGrp>
+			<usg type="geo">A</usg>
+		</entry>
+
+		<entry>
+			<form type="lemma">amk</form>
+			<form type="non_lemma">amk3</form>
+			<gramGrp>
+				<pos>noun</pos>
+			</gramGrp>
+			<usg type="geo">B</usg>
+		</entry>
+
+
+
+		<entry>
+			<form type="lemma">fml</form>
+			<form type="non_lemma">fml0</form>
+			<gramGrp>
+				<pos>noun</pos>
+			</gramGrp>
+			<usg type="geo">A</usg>
+		</entry>
+
+		<entry>
+			<form type="lemma">fml</form>
+			<form type="non_lemma">fml1</form>
+			<gramGrp>
+				<pos>noun</pos>
+			</gramGrp>
+			<usg type="geo">A</usg>
+		</entry>
+	</body>
+</text>
