@@ -1,59 +1,168 @@
 <text>
-	<body>
-		<entry>
-			<form type="lemma">amk</form>
-			<form type="non_lemma">amk0</form>
-			<gramGrp>
-				<pos>noun</pos>
-			</gramGrp>
-			<usg type="geo">A</usg>
-		</entry>
-
-		<entry>
-			<form type="lemma">amk</form>
-			<form type="non_lemma">amk1</form>
-			<gramGrp>
-				<pos>verb</pos>
-			</gramGrp>
-			<usg type="geo">A</usg>
-		</entry>
-
-		<entry>
-			<form type="lemma">amk</form>
-			<form type="non_lemma">amk2</form>
-			<gramGrp>
-				<pos>noun</pos>
-			</gramGrp>
-			<usg type="geo">A</usg>
-		</entry>
-
-		<entry>
-			<form type="lemma">amk</form>
-			<form type="non_lemma">amk3</form>
-			<gramGrp>
-				<pos>noun</pos>
-			</gramGrp>
+	<entry>
+		<form type="lemma">
+			<orth>ϣⲟⲧⲣⲉϥ</orth>
+		</form>
+		<form >
+			<orth>ϣⲟⲧⲣⲉϥ</orth>
 			<usg type="geo">B</usg>
-		</entry>
+		</form>
+		<gramGrp>
+			<pos>Subst.</pos>
+		</gramGrp>
+		<xr type="cf">
+			<ref type="Greek">μωραίνειν</ref> 
+			<ref type="Greek_sense">love</ref>				
+		</xr>
+		<sense>
+			<cit type="translation" xml:lang="en">
+				<quote>falcon</quote>
+			</cit>
+			<cit>
+				<bibl>LSJ 1621b; Preisigke 2:474 (Förster)</bibl>
+			</cit>
+		</sense>
+	</entry>
+
+	<!-- <orth> in form type="lemma" different -->
+
+	<entry>
+		<form type="lemma">
+			<orth>ϣⲟⲧⲣⲉϥ1</orth>
+		</form>
+		<form >
+			<orth>ϣⲟⲧⲣⲉϥ1</orth>
+			<usg type="geo">B</usg>
+		</form>
+		<gramGrp>
+			<pos>Subst.</pos>
+		</gramGrp>
+		<xr type="cf">
+			<ref type="Greek">μωραίνειν</ref> 
+			<ref type="Greek_sense">love</ref>				
+		</xr>
+		<sense>
+			<cit type="translation" xml:lang="en">
+				<quote>falcon</quote>
+			</cit>
+			<cit>
+				<bibl>LSJ 1621b; Preisigke 2:474 (Förster)</bibl>
+			</cit>
+		</sense>
+	</entry>
+
+	<!--  <orth> in form
+	different -->	  
+
+	<entry>
+		<form type="lemma">
+			<orth>ϣⲟⲧⲣⲉϥ1</orth>
+		</form>
+		<form >
+			<orth>ϣⲟⲧⲣⲉϥ2</orth>
+			<usg type="geo">B</usg>
+		</form>
+		<gramGrp>
+			<pos>Subst.</pos>
+		</gramGrp>
+		<xr type="cf">
+			<ref type="Greek">μωραίνειν</ref> 
+			<ref type="Greek_sense">love</ref>				
+		</xr>
+		<sense>
+			<cit type="translation" xml:lang="en">
+				<quote>falcon</quote>
+			</cit>
+			<cit>
+				<bibl>LSJ 1621b; Preisigke 2:474 (Förster)</bibl>
+			</cit>
+		</sense>
+	</entry>
+
+	<!--  <orth>
+	in non-lemma form  different -->	  
+
+	<entry>
+		<form type="lemma">
+			<orth>ϣⲟⲧⲣⲉϥ1</orth>
+		</form>
+		<form >
+			<orth>ϣⲟⲧⲣⲉϥ3</orth>
+			<usg type="geo">B</usg>
+		</form>
+		<gramGrp>
+			<pos>Subst.</pos>
+		</gramGrp>
+		<xr type="cf">
+			<ref type="Greek">μωραίνειν</ref> 
+			<ref type="Greek_sense">love</ref>				
+		</xr>
+		<sense>
+			<cit type="translation" xml:lang="en">
+				<quote>falcon</quote>
+			</cit>
+			<cit>
+				<bibl>LSJ 1621b; Preisigke 2:474 (Förster)</bibl>
+			</cit>
+		</sense>
+	</entry>
+
+	<!-- <usg
+	type="geo">  different -->	  
+
+	<entry>
+		<form type="lemma">
+			<orth>ϣⲟⲧⲣⲉϥ1</orth>
+		</form>
+		<form >
+			<orth>ϣⲟⲧⲣⲉϥ3</orth>
+			<usg type="geo">Ak</usg>
+		</form>
+		<gramGrp>
+			<pos>Subst.</pos>
+		</gramGrp>
+		<xr type="cf">
+			<ref type="Greek">μωραίνειν</ref> 
+			<ref type="Greek_sense">love</ref>				
+		</xr>
+		<sense>
+			<cit type="translation" xml:lang="en">
+				<quote>falcon</quote>
+			</cit>
+			<cit>
+				<bibl>LSJ 1621b; Preisigke 2:474 (Förster)</bibl>
+			</cit>
+		</sense>
+	</entry>
 
 
 
-		<entry>
-			<form type="lemma">fml</form>
-			<form type="non_lemma">fml0</form>
-			<gramGrp>
-				<pos>noun</pos>
-			</gramGrp>
-			<usg type="geo">A</usg>
-		</entry>
+	<!-- <quote>
+	in <sense> different -->	  
 
-		<entry>
-			<form type="lemma">fml</form>
-			<form type="non_lemma">fml1</form>
-			<gramGrp>
-				<pos>noun</pos>
-			</gramGrp>
-			<usg type="geo">A</usg>
-		</entry>
-	</body>
+	<entry>
+		<form type="lemma">
+			<orth>ϣⲟⲧⲣⲉϥ1</orth>
+		</form>
+		<form >
+			<orth>ϣⲟⲧⲣⲉϥ3</orth>
+			<usg type="geo">Ak</usg>
+		</form>
+		<gramGrp>
+			<pos>Verb</pos>
+		</gramGrp>
+		<xr type="cf">
+			<ref type="Greek">μωραίνειν</ref> 
+			<ref type="Greek_sense">love</ref>				
+		</xr>
+		<sense>
+			<cit type="translation" xml:lang="en">
+				<quote>falcon</quote>
+			</cit>
+			<cit>
+				<bibl>LSJ 1621b; Preisigke 2:474 (Förster)</bibl>
+			</cit>
+		</sense>
+	</entry>
+
 </text>
