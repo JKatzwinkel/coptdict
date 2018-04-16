@@ -39,7 +39,7 @@ for entry in tree.xpath(".//entry[form/@type='lemma']"):
                     output_entry.append(e)
 
 
-output.write('out.xml')
+output.write('out.xml', encoding="utf-8")
         
 
 
