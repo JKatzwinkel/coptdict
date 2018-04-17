@@ -4,7 +4,7 @@ from lxml import etree
 from copy import deepcopy
 
 #input tree
-tree = etree.parse('dummy.xml')
+tree = etree.parse('new_xpath_test.xml')
 
 #output tree
 body = etree.Element('body')
