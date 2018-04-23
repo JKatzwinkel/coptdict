@@ -1,10 +1,12 @@
 #!/usr/bin/python
 
+import re
+
 from lxml import etree
 from copy import deepcopy
 
 #input tree
-tree = etree.parse('new_xpath_test.xml')
+tree = etree.parse('new_xpath_test_2.xml')
 
 #output tree
 body = etree.Element('body')
@@ -16,6 +18,20 @@ components = {
             "form": ["orth", "usg"],
             "sense": ["cit/quote"]
             }
+
+def att_val_query(value):
+    try:
+        components = re.findall("([^']+|')", value)
+    except Exception as e:
+        print(e)
+        print("unknown object: ", value)
+        return "''"
+    if len(components) > 1:
+        return "concat({})".format(', '.join(["\"{}\"".format(c) for c in components]))
+    else:
+        return "\"" + components[0] + "\""
+
+
 
 for entry in tree.xpath(".//entry[form/@type='lemma']"):
     # extract lemma base form
@@ -34,12 +50,15 @@ for entry in tree.xpath(".//entry[form/@type='lemma']"):
         output_entry = output_entry[0]
         for elemname, criteria in components.items():
             for e in entry.xpath(elemname):
-                query = ''.join(["[{}]".format(key+"='{}'".format(e.xpath(key)[0].text)) for key in criteria if len(e.xpath(key)) > 0 ] )
-                if len(output_entry.xpath(elemname + query)) < 1:
-                    output_entry.append(e)
+                query = ''.join(["[{}]".format(key+"="+att_val_query(e.xpath(key)[0].text)) for key in criteria if any([x != None for x in e.xpath(key)])] )
+                try:
+                    if len(output_entry.xpath(elemname + query)) < 1:
+                        output_entry.append(e)
+                except:
+                    print(elemname + query)
 
 
-output.write('out.xml', encoding="utf-8")
+output.write('out.xml', encoding="utf-8", pretty_print=True)
         
 
 
