@@ -5,6 +5,8 @@ import re
 from lxml import etree
 from copy import deepcopy
 
+from tqdm import tqdm
+
 #input tree
 tree = etree.parse('new_xpath_test_2.xml')
 
@@ -33,7 +35,11 @@ def att_val_query(value):
 
 
 
-for entry in tree.xpath(".//entry[form/@type='lemma']"):
+
+entries = tree.xpath(".//entry[form/@type='lemma']")
+pbar = tqdm(total=len(entries))
+
+for i, entry in enumerate(entries):
     # extract lemma base form
     lemma = entry.find("form[@type='lemma']").find("orth").text
     # look up lemma base entry in output tree
@@ -56,6 +62,8 @@ for entry in tree.xpath(".//entry[form/@type='lemma']"):
                         output_entry.append(e)
                 except:
                     print(elemname + query)
+    
+    pbar.update(1)
 
 
 output.write('out.xml', encoding="utf-8", pretty_print=True)
