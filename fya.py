@@ -21,17 +21,17 @@ components = {
             "sense": ["cit/quote"]
             }
 
-def att_val_query(value):
+def att_val_query(key, value):
     try:
         components = re.findall("([^']+|')", value)
     except Exception as e:
         print(e)
-        print("unknown object: ", value)
-        return "''"
+        print("unknown object: ", value, "for key ", key)
+        return "key=''"
     if len(components) > 1:
         return "concat({})".format(', '.join(["\"{}\"".format(c) for c in components]))
     else:
-        return "\"" + components[0] + "\""
+        return key+"=\"" + components[0] + "\""
 
 
 
@@ -56,7 +56,7 @@ for i, entry in enumerate(entries):
         output_entry = output_entry[0]
         for elemname, criteria in components.items():
             for e in entry.xpath(elemname):
-                query = ''.join(["[{}]".format(key+"="+att_val_query(e.xpath(key)[0].text)) for key in criteria if any([x != None for x in e.xpath(key)])] )
+                query = ''.join(["[{}]".format(att_val_query(key, e.xpath(key)[0].text)) for key in criteria if any([x != None for x in e.xpath(key)])] )
                 try:
                     if len(output_entry.xpath(elemname + query)) < 1:
                         output_entry.append(e)
