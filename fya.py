@@ -61,11 +61,11 @@ for i, entry in enumerate(entries):
         ["[{}]".format(
             key+"='{}'".format(entry.xpath(key)[0].text))
         for key in key_parts] )
-    query += "[form/@type='lemma'][form/orth='{}']".format(lemma)
+    query += "[form[@type='lemma' and orth='{}']]".format(lemma)
     # run query on output lemma entry list
-    output_entry = output.xpath(query)
+    output_matches = output.xpath(query)
     # if lemma has no entry element in output yet, create one by copying current element from wordlist
-    if len(output_entry) < 1:
+    if len(output_matches) < 1:
         output_entry = deepcopy(entry)
         output.getroot().append(output_entry)
     else:
@@ -74,7 +74,7 @@ for i, entry in enumerate(entries):
         # into output list lemma entry
         #
         # select output list entry
-        output_entry = output_entry[0]
+        output_entry = output_matches[0]
         # iterate through predefined subnode selectors
         for elemname, criteria in components.items():
             # query all input list entry subnode instances for this selector
